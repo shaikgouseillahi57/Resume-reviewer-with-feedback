@@ -1,0 +1,15 @@
+{
+  "name": "resume-reviewer",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"magenta,cyan\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "node scripts/start-backend.js",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
